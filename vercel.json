@@ -1,10 +1,16 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
     {
       "source": "/cte-mdfe-ciot",
       "destination": "/cte-mdfe-ciot.html"
+    },
+    {
+      "source": "/nfe-bling",
+      "destination": "/nfe-bling.html"
+    },
+    {
+      "source": "/index",
+      "destination": "/index.html"
     }
   ]
 }
