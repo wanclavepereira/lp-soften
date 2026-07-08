@@ -1,11 +1,19 @@
-# LP NF-e Soften
+# LPs Soften Sistemas - Vercel
 
-Projeto estático para publicar no Vercel.
+Projeto estático com duas landing pages, sem uso de pastas internas.
 
-Estrutura:
-- `index.html`
-- `assets/atendente-soften.png`
-- `vercel.json`
+## Arquivos
 
-No Vercel, use Framework Preset: Other.
-Não precisa de Build Command.
+- `index.html`: página de NF-e, abre na raiz do projeto.
+- `cte-mdfe-ciot.html`: página de CT-e, MDF-e e CIOT.
+- `atendente-soften.png`: imagem usada na página de NF-e.
+- `vercel.json`: configura URL limpa para a página de CT-e/MDF-e/CIOT.
+
+## URLs após deploy
+
+- NF-e: `/`
+- CT-e, MDF-e e CIOT: `/cte-mdfe-ciot`
+
+Se o Vercel não aplicar a URL limpa, use:
+
+- `/cte-mdfe-ciot.html`
