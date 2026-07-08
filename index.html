@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sistema Emissor de NF-e | Emita Nota Fiscal com a Soften</title>
+
+  <meta name="description" content="Emita NF-e com mais praticidade, reduza retrabalho e organize vendas, estoque e financeiro em um só sistema. Conheça o emissor de NF-e da Soften Sistemas." />
+  <meta name="keywords" content="sistema emissor nfe, emissor de nota fiscal, emitir nota fiscal eletrônica, sistema para emitir nfe, software emissor nfe, Soften Sistemas" />
+
+  <meta property="og:title" content="Sistema Emissor de NF-e | Soften Sistemas" />
+  <meta property="og:description" content="Emita NF-e com praticidade e organize sua empresa em um só sistema com a Soften." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lp.softensistemas.com.br/sistema-emissor-nfe-p" />
+  <meta property="og:image" content="https://www.softensistemas.com.br/lovable-uploads/logo-soften-sistemas-footer.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --blue-950: #031b3f;
+      --blue-900: #062b66;
+      --blue-800: #073b8e;
+      --blue-700: #0a55c8;
+      --blue-600: #0d6efd;
+      --blue-100: #eaf3ff;
+      --blue-50: #f4f9ff;
+      --orange: #ff8a00;
+      --orange-light: #ffb020;
+      --green: #16a34a;
+      --red: #ef4444;
+      --gray-950: #111827;
+      --gray-800: #1f2937;
+      --gray-700: #374151;
+      --gray-600: #4b5563;
+      --gray-500: #6b7280;
+      --gray-300: #d1d5db;
+      --gray-200: #e5e7eb;
+      --gray-100: #f3f4f6;
+      --white: #ffffff;
+      --container: 1180px;
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 14px;
+      --shadow: 0 22px 70px rgba(3, 27, 63, 0.18);
+      --shadow-soft: 0 14px 42px rgba(3, 27, 63, 0.09);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Inter", Arial, sans-serif; background: #ffffff; color: var(--gray-950); line-height: 1.5; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(var(--container), calc(100% - 32px)); margin: 0 auto; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 15px 24px; border-radius: 999px; font-size: 16px; font-weight: 800;
+      border: 0; cursor: pointer; transition: 0.2s ease; text-align: center; white-space: nowrap;
+    }
+    .btn-primary { color: #ffffff; background: linear-gradient(135deg, var(--orange), var(--orange-light)); box-shadow: 0 14px 30px rgba(255, 138, 0, 0.30); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 42px rgba(255, 138, 0, 0.38); }
+    .btn-blue { color: #ffffff; background: linear-gradient(135deg, var(--blue-800), var(--blue-600)); box-shadow: 0 14px 30px rgba(13, 110, 253, 0.22); }
+    .btn-blue:hover { transform: translateY(-2px); box-shadow: 0 18px 42px rgba(13, 110, 253, 0.30); }
+    .btn-light { color: var(--blue-900); background: #ffffff; border: 1px solid rgba(255,255,255,0.6); }
+    .btn-light:hover { transform: translateY(-2px); background: var(--blue-50); }
+
+    .header { position: sticky; top: 0; z-index: 80; background: rgba(255,255,255,0.94); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(229,231,235,0.9); }
+    .header-inner { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .logo img { width: 176px; height: auto; }
+    .nav { display: flex; align-items: center; gap: 24px; font-size: 14px; color: var(--gray-700); font-weight: 700; }
+    .nav a:hover { color: var(--blue-700); }
+    .header-cta { padding: 12px 18px; font-size: 14px; }
+
+    .hero {
+      position: relative; overflow: hidden; padding: 74px 0 70px; color: #ffffff;
+      background: radial-gradient(circle at 85% 10%, rgba(255, 138, 0, 0.20), transparent 30%), radial-gradient(circle at 10% 10%, rgba(13, 110, 253, 0.28), transparent 32%), linear-gradient(135deg, #031b3f 0%, #063579 48%, #0a55c8 100%);
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr 0.98fr; gap: 42px; align-items: center; position: relative; z-index: 2; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.18);
+      color: rgba(255,255,255,0.92); padding: 9px 14px; border-radius: 999px; font-size: 13px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 18px;
+    }
+    .hero h1 { font-size: clamp(38px, 5vw, 62px); line-height: 1.02; letter-spacing: -0.055em; margin-bottom: 18px; max-width: 760px; }
+    .hero h1 span { color: #ffbd59; }
+    .hero-lead { font-size: clamp(18px, 2vw, 21px); color: rgba(255,255,255,0.88); max-width: 700px; margin-bottom: 22px; }
+    .hero-list { list-style: none; display: grid; gap: 9px; margin-bottom: 26px; max-width: 700px; }
+    .hero-list li { display: flex; align-items: flex-start; gap: 10px; color: rgba(255,255,255,0.9); font-size: 16px; font-weight: 650; }
+    .hero-list span { color: #ffbd59; font-weight: 900; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 24px; }
+    .hero-proof { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-proof span { display: inline-flex; align-items: center; gap: 8px; padding: 9px 12px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.86); border-radius: 999px; font-size: 14px; font-weight: 800; }
+
+    .hero-card { position: relative; background: transparent; border: 0; border-radius: 34px; padding: 0; box-shadow: none; overflow: visible; }
+    .hero-visual { position: relative; border-radius: 30px; overflow: hidden; aspect-ratio: 1 / 1.06; min-height: 0; background: transparent; box-shadow: 0 24px 70px rgba(0,0,0,0.26); isolation: isolate; }
+    .hero-visual::after { content: ""; position: absolute; inset: 0; border-radius: 30px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18); pointer-events: none; }
+    .hero-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-price-badge { position: absolute; top: -26px; right: -22px; background: linear-gradient(145deg, #050505 0%, #151515 48%, #ff8a00 49%, #ffb020 100%); color: #ffffff; padding: 18px 20px 19px; border-radius: 22px; box-shadow: 0 22px 42px rgba(0,0,0,0.34), 0 12px 28px rgba(255,138,0,0.24); width: 246px; z-index: 8; text-align: left; transform: rotate(3deg); border: 2px solid rgba(255,255,255,0.28); }
+    .hero-price-badge::before { content: ""; position: absolute; inset: 8px; border: 1px dashed rgba(255,255,255,0.48); border-radius: 16px; pointer-events: none; }
+    .hero-price-badge small { display: block; font-size: 11px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; color: #ffbd59; margin-bottom: 8px; position: relative; z-index: 1; }
+    .hero-price-badge strong { display: block; font-size: 34px; line-height: 0.95; font-weight: 900; letter-spacing: -0.05em; position: relative; z-index: 1; }
+    .hero-price-badge span { display: block; font-size: 13px; font-weight: 800; margin-top: 8px; color: rgba(255,255,255,0.94); position: relative; z-index: 1; }
+    .hero-visual-overlay { position: absolute; left: 18px; bottom: 18px; background: rgba(3, 27, 63, 0.78); backdrop-filter: blur(10px); color: #ffffff; border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 14px 16px; max-width: 280px; z-index: 2; }
+    .hero-visual-overlay strong { display: block; font-size: 16px; font-weight: 900; margin-bottom: 4px; }
+    .hero-visual-overlay p { font-size: 13px; line-height: 1.4; color: rgba(255,255,255,0.86); margin: 0; }
+
+    .section { padding: 86px 0; }
+    .section-light { background: linear-gradient(180deg, #ffffff 0%, var(--blue-50) 100%); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--blue-800); background: rgba(13,110,253,0.10); padding: 8px 14px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.02em; font-size: 13px; font-weight: 900; margin-bottom: 18px; }
+    .section-title { font-size: clamp(30px, 4vw, 48px); line-height: 1.08; letter-spacing: -0.045em; color: var(--blue-950); margin-bottom: 16px; }
+    .section-text { color: var(--gray-600); font-size: 18px; max-width: 780px; }
+    .section-head.center { text-align: center; }
+    .section-head.center .section-text { margin: 0 auto; }
+    .section-cta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
+    .section-cta.center { justify-content: center; }
+
+    .modules-section { padding: 78px 0 88px; background: #f4f6f8; }
+    .modules-head { text-align: center; margin-bottom: 42px; }
+    .modules-eyebrow { display: block; color: #004b93; font-size: 14px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 10px; }
+    .modules-title { color: #001b4f; font-size: clamp(28px, 3.5vw, 40px); line-height: 1.15; letter-spacing: -0.035em; font-weight: 900; margin-bottom: 14px; }
+    .modules-subtitle { color: #1f3763; font-size: 18px; font-weight: 400; }
+    .modules-card { display: grid; grid-template-columns: 1fr 1fr 1fr; max-width: 1168px; margin: 0 auto; background: #ffffff; border: 1px solid #d7dee8; border-radius: 16px; overflow: hidden; box-shadow: 0 18px 34px rgba(0, 24, 67, 0.16); }
+    .modules-column { padding: 24px 24px 26px; min-height: 315px; transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease; position: relative; }
+    .modules-column + .modules-column { border-left: 1px solid #dbe2ec; }
+    .modules-column:hover { transform: translateY(-8px); background: linear-gradient(180deg, #13538d 0%, #0f4779 100%); color: #ffffff; box-shadow: 0 18px 36px rgba(0, 24, 67, 0.20); border-color: rgba(19,83,141,0.55); z-index: 2; }
+    .modules-column:hover .modules-category h3, .modules-column:hover .modules-list li { color: #ffffff; }
+    .modules-column:hover .modules-icon { background: rgba(255, 255, 255, 0.18); color: #ffffff; }
+    .modules-column:hover .modules-check { border-color: #00c8ff; color: #00c8ff; }
+    .modules-category { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+    .modules-icon { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; font-size: 20px; flex: 0 0 auto; background: #e8eef5; color: #13538d; }
+    .modules-category h3 { color: #001b4f; font-size: 18px; font-weight: 900; margin: 0; }
+    .modules-list { list-style: none; display: grid; gap: 13px; margin: 0; padding: 0; }
+    .modules-list li { display: flex; align-items: center; gap: 10px; color: #001b4f; font-size: 14px; font-weight: 500; }
+    .modules-check { width: 15px; height: 15px; border-radius: 50%; display: grid; place-items: center; flex: 0 0 auto; border: 1.8px solid #13538d; color: #13538d; font-size: 9px; font-weight: 900; line-height: 1; }
+    .modules-cta { margin-top: 34px; display: flex; justify-content: center; }
+
+    .features-grid { margin-top: 38px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .feature-card { padding: 28px; border-radius: var(--radius-lg); background: #ffffff; border: 1px solid var(--gray-200); box-shadow: var(--shadow-soft); }
+    .feature-icon { width: 54px; height: 54px; border-radius: 17px; background: var(--blue-100); color: var(--blue-800); display: grid; place-items: center; font-size: 24px; margin-bottom: 18px; }
+    .feature-card h3 { color: var(--blue-950); font-size: 21px; line-height: 1.18; letter-spacing: -0.02em; margin-bottom: 10px; }
+    .feature-card p { color: var(--gray-600); font-size: 16px; }
+
+    .split { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 48px; align-items: center; }
+    .panel { background: #ffffff; border: 1px solid var(--gray-200); border-radius: var(--radius-xl); padding: 34px; box-shadow: var(--shadow-soft); }
+    .list { list-style: none; display: grid; gap: 15px; margin-top: 24px; }
+    .list li { display: grid; grid-template-columns: 32px 1fr; gap: 12px; color: var(--gray-700); font-size: 16px; }
+    .check { width: 32px; height: 32px; border-radius: 999px; display: grid; place-items: center; color: var(--green); background: rgba(22,163,74,0.12); font-weight: 900; }
+    .steps { display: grid; gap: 14px; margin-top: 30px; }
+    .step { display: grid; grid-template-columns: 54px 1fr; gap: 16px; padding: 20px; border-radius: var(--radius-lg); border: 1px solid var(--gray-200); background: #ffffff; box-shadow: 0 12px 32px rgba(3,27,63,0.06); }
+    .step-number { width: 54px; height: 54px; border-radius: 17px; background: var(--blue-900); color: #ffffff; display: grid; place-items: center; font-size: 20px; font-weight: 900; }
+    .step h3 { color: var(--blue-950); font-size: 18px; margin-bottom: 4px; }
+    .step p { color: var(--gray-600); font-size: 15px; }
+
+    .blue-band { color: #ffffff; border-radius: 36px; padding: 52px; background: radial-gradient(circle at 92% 10%, rgba(255,255,255,0.14), transparent 28%), linear-gradient(135deg, var(--blue-950), var(--blue-800)); display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 34px; align-items: center; box-shadow: var(--shadow); }
+    .blue-band h2 { font-size: clamp(30px, 4vw, 46px); line-height: 1.08; letter-spacing: -0.04em; margin-bottom: 16px; }
+    .blue-band p { color: rgba(255,255,255,0.82); font-size: 18px; margin-bottom: 24px; }
+    .blue-band .eyebrow { background: rgba(255,255,255,0.12); color: #ffffff; }
+    .mini-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .mini-card { padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.16); font-weight: 850; }
+
+    .comparison { margin-top: 38px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .comparison-card { background: #ffffff; border: 1px solid var(--gray-200); border-radius: var(--radius-xl); padding: 30px; box-shadow: var(--shadow-soft); }
+    .comparison-card.bad { background: linear-gradient(180deg, rgba(239,68,68,0.06), #ffffff); border-color: rgba(239,68,68,0.18); }
+    .comparison-card.good { background: linear-gradient(180deg, rgba(22,163,74,0.07), #ffffff); border-color: rgba(22,163,74,0.18); }
+    .comparison-card h3 { color: var(--blue-950); font-size: 24px; margin-bottom: 18px; }
+    .comparison-card ul { list-style: none; display: grid; gap: 12px; }
+    .comparison-card li { display: grid; grid-template-columns: 30px 1fr; gap: 10px; color: var(--gray-700); }
+    .xmark { width: 30px; height: 30px; border-radius: 999px; display: grid; place-items: center; color: var(--red); background: rgba(239,68,68,0.10); font-weight: 900; }
+
+    .testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 38px; }
+    .testimonial { background: #ffffff; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 26px; box-shadow: var(--shadow-soft); }
+    .stars { color: #f59e0b; letter-spacing: 2px; margin-bottom: 14px; font-size: 18px; }
+    .testimonial p { color: var(--gray-700); font-size: 16px; margin-bottom: 18px; }
+    .testimonial strong { color: var(--blue-950); display: block; margin-bottom: 2px; }
+    .testimonial span { color: var(--gray-500); font-size: 14px; font-weight: 700; }
+
+    .faq { display: grid; gap: 14px; margin-top: 36px; }
+    details { background: #ffffff; border: 1px solid var(--gray-200); border-radius: 18px; padding: 20px 22px; box-shadow: 0 12px 28px rgba(3,27,63,0.06); }
+    summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; color: var(--blue-950); font-weight: 900; font-size: 18px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--blue-700); font-size: 26px; line-height: 1; }
+    details[open] summary::after { content: "–"; }
+    details p { margin-top: 14px; color: var(--gray-600); font-size: 16px; }
+
+    .final-cta { padding: 78px 0; text-align: center; color: #ffffff; background: radial-gradient(circle at 20% 20%, rgba(255,138,0,0.20), transparent 32%), linear-gradient(135deg, #031b3f, #073b8e); }
+    .final-cta h2 { font-size: clamp(34px, 5vw, 56px); line-height: 1.05; letter-spacing: -0.05em; margin: 0 auto 18px; max-width: 920px; }
+    .final-cta p { color: rgba(255,255,255,0.84); font-size: 20px; max-width: 780px; margin: 0 auto 28px; }
+    .footer { background: #02132d; color: rgba(255,255,255,0.75); padding: 34px 0; font-size: 14px; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer img { width: 168px; }
+    .floating-whatsapp { position: fixed; right: 20px; bottom: 20px; width: 62px; height: 62px; border-radius: 50%; background: #25d366; color: #ffffff; display: grid; place-items: center; font-size: 30px; box-shadow: 0 16px 36px rgba(37,211,102,0.36); transition: 0.2s ease; z-index: 90; }
+    .floating-whatsapp:hover { transform: translateY(-3px) scale(1.03); }
+
+    @media (max-width: 980px) {
+      .nav { display: none; }
+      .hero-grid, .split, .blue-band, .comparison { grid-template-columns: 1fr; }
+      .features-grid, .testimonials { grid-template-columns: repeat(2, 1fr); }
+      .hero-visual { aspect-ratio: 1 / 1.04; }
+      .modules-card { grid-template-columns: 1fr; }
+      .modules-column + .modules-column { border-left: 0; border-top: 1px solid #dbe2ec; }
+    }
+    @media (max-width: 640px) {
+      html, body { max-width: 100%; overflow-x: hidden; }
+      .container { width: min(100% - 24px, var(--container)); }
+      .hero-grid { gap: 24px; }
+      .hero h1 { font-size: clamp(34px, 10vw, 44px); line-height: 1.05; }
+      .hero-list li { font-size: 15px; }
+      .header-inner { height: 70px; }
+      .logo img { width: 146px; }
+      .header-cta { display: none; }
+      .hero { padding: 54px 0 58px; }
+      .section { padding: 64px 0; }
+      .hero-actions .btn, .section-cta .btn, .modules-cta .btn { width: 100%; }
+      .hero-proof { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+      .hero-proof span { flex: 0 0 auto; scroll-snap-align: start; }
+      .hero-visual { aspect-ratio: 1 / 1.04; margin-top: 28px; border-radius: 24px; }
+      .hero-price-badge { top: -22px; right: 6px; width: min(210px, 58vw); padding: 14px 16px; transform: rotate(2deg); }
+      .hero-price-badge strong { font-size: 27px; }
+      .hero-visual-overlay { left: 14px; right: 14px; bottom: 14px; max-width: none; }
+      .modules-section { padding: 60px 0 68px; }
+      .modules-subtitle { font-size: 16px; }
+      .modules-card, .features-grid, .testimonials, .comparison, .mini-grid {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(282px, 86vw);
+        grid-template-columns: none;
+        gap: 16px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: visible;
+        padding: 6px 0 18px;
+        margin-left: 0;
+        margin-right: 0;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 0;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        touch-action: pan-x;
+      }
+
+      #como-funciona .split {
+        display: block;
+      }
+
+      #como-funciona .steps {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 16px;
+        width: calc(100vw - 24px);
+        max-width: calc(100vw - 24px);
+        overflow-x: auto;
+        overflow-y: visible;
+        padding: 6px 12px 18px;
+        margin-left: -12px;
+        margin-right: -12px;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 12px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        touch-action: pan-x;
+      }
+
+      #como-funciona .step {
+        flex: 0 0 84vw;
+        max-width: 360px;
+        min-width: 282px;
+      }
+
+      #como-funciona .panel {
+        margin-top: 28px;
+      }
+      .modules-card::-webkit-scrollbar, .features-grid::-webkit-scrollbar, .testimonials::-webkit-scrollbar, .comparison::-webkit-scrollbar, .mini-grid::-webkit-scrollbar, #como-funciona .steps::-webkit-scrollbar, .hero-proof::-webkit-scrollbar { display: none; }
+      .modules-card { max-width: none; border: 0; background: transparent; box-shadow: none; border-radius: 0; }
+      .modules-column, .feature-card, .testimonial, .comparison-card, .mini-card, .step { scroll-snap-align: start; }
+      .modules-column { padding: 24px 20px; min-height: 315px; border-radius: 18px; border: 1px solid #dbe2ec; box-shadow: 0 14px 30px rgba(0,24,67,0.12); background: #ffffff; }
+      .modules-column + .modules-column { border-left: 1px solid #dbe2ec; border-top: 0; }
+      .modules-column:hover { transform: none; }
+      .panel, .feature-card, .comparison-card, .testimonial { padding: 24px; }
+      .step { grid-template-columns: 1fr; }
+      .blue-band { padding: 30px; border-radius: 26px; }
+      .floating-whatsapp { width: 56px; height: 56px; font-size: 27px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="https://www.softensistemas.com.br/?utm_source=lp&utm_medium=header&utm_campaign=emissor_nfe" target="_blank" rel="noopener">
+        <img src="https://www.softensistemas.com.br/lovable-uploads/logo-soften-sistemas-footer.png" alt="Soften Sistemas" />
+      </a>
+      <nav class="nav" aria-label="Menu principal">
+        <a href="#modulos">Módulos</a>
+        <a href="#facilidades">Facilidades</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#gestao">Gestão integrada</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+      <a class="btn btn-primary header-cta" href="https://wa.me/5521993404000?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20sistema%20emissor%20de%20NF-e%20da%20Soften.&utm_source=lp&utm_medium=botao_header&utm_campaign=emissor_nfe" target="_blank" rel="noopener">Falar com especialista</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="topo">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge">Emissor de NF-e simples, rápido e integrado</div>
+          <h1>Emita <span>NF-e</span> com praticidade e organize sua empresa em um só sistema</h1>
+         
+          <ul class="hero-list">
+            <li><span>✓</span> Emissão de NF-e de forma prática e segura.</li>
+            <li><span>✓</span> Geração de DANFE e envio do XML para o cliente e contador.</li>
+            <li><span>✓</span> Integração com vendas, produtos, estoque e financeiro.</li>
+            <li><span>✓</span> Menos digitação manual, menos erro e mais tempo para vender.</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/5521993404000?text=Ol%C3%A1%2C%20quero%20emitir%20NF-e%20com%20mais%20facilidade%20pela%20Soften.&utm_source=lp&utm_medium=botao_hero&utm_campaign=emissor_nfe" target="_blank" rel="noopener">Começar agora</a>
+           
+          </div>
+          <div class="hero-proof">
+            <span>✅ NF-e</span><span>✅ DANFE</span><span>✅ XML</span><span>✅ Estoque</span><span>✅ Financeiro</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-price-badge">
+            <small>Condição especial</small>
+            <span>Sistema de NF-e por menos de</span>
+            <strong>R$ 3,99/dia</strong>
+          </div>
+
+          <div class="hero-visual" aria-label="Atendimento Soften Sistemas">
+            <img src="./assets/atendente-soften.png" alt="Atendente da Soften Sistemas em ambiente corporativo" />
+            <div class="hero-visual-overlay">
+              <strong>Atendimento especializado</strong>
+              <p>Fale com a Soften e veja como emitir NF-e com praticidade dentro de um sistema completo de gestão.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="modules-section" id="modulos">
+      <div class="container">
+        <div class="modules-head">
+          <span class="modules-eyebrow">Mais que um emissor de NF-e</span>
+          <h2 class="modules-title">Emissor de Nota Fiscal Eletrônica dentro de um Sistema de Gestão Completo</h2>
+          <p class="modules-subtitle">Tudo que você precisa em um único lugar: emissão, gestão e controle financeiro</p>
+        </div>
+        <div class="modules-card">
+          <div class="modules-column">
+            <div class="modules-category"><div class="modules-icon">▣</div><h3>Fiscal</h3></div>
+            <ul class="modules-list">
+              <li><span class="modules-check">✓</span> Emissor de NF-e</li>
+              <li><span class="modules-check">✓</span> Emissor de NFC-e</li>
+              <li><span class="modules-check">✓</span> SAT</li>
+              <li><span class="modules-check">✓</span> Emissor de NFS-e</li>
+              <li><span class="modules-check">✓</span> CT-e e MDF-e</li>
+              <li><span class="modules-check">✓</span> Recebedor/Manifestador</li>
+              <li><span class="modules-check">✓</span> Carta de Correção</li>
+            </ul>
+          </div>
+          <div class="modules-column">
+            <div class="modules-category"><div class="modules-icon">🛒</div><h3>Comercial</h3></div>
+            <ul class="modules-list">
+              <li><span class="modules-check">✓</span> Compras</li>
+              <li><span class="modules-check">✓</span> Estoque</li>
+              <li><span class="modules-check">✓</span> Orçamento</li>
+              <li><span class="modules-check">✓</span> Vendas</li>
+              <li><span class="modules-check">✓</span> Frente de Caixa</li>
+              <li><span class="modules-check">✓</span> Ordem de Serviço</li>
+              <li><span class="modules-check">✓</span> Ordem de Produção</li>
+            </ul>
+          </div>
+          <div class="modules-column">
+            <div class="modules-category"><div class="modules-icon">↗</div><h3>Financeiro</h3></div>
+            <ul class="modules-list">
+              <li><span class="modules-check">✓</span> Contas a Pagar</li>
+              <li><span class="modules-check">✓</span> Contas a Receber</li>
+              <li><span class="modules-check">✓</span> Fluxo de Caixa</li>
+              <li><span class="modules-check">✓</span> Orçamento Financeiro</li>
+              <li><span class="modules-check">✓</span> DRE</li>
+              <li><span class="modules-check">✓</span> Emissão de Boletos</li>
+              <li><span class="modules-check">✓</span> Link de Cartão</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modules-cta">
+          <a class="btn btn-primary" href="https://wa.me/5521993404000?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20sistema%20completo%20da%20Soften%20com%20emiss%C3%A3o%20de%20NF-e%2C%20gest%C3%A3o%20comercial%20e%20financeiro.&utm_source=lp&utm_medium=botao_segunda_dobra_modulos&utm_campaign=emissor_nfe" target="_blank" rel="noopener">Conhecer o sistema completo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="facilidades">
+      <div class="container">
+        <div class="section-head center">
+          <div class="eyebrow">Facilidades para sua rotina</div>
+          <h2 class="section-title">Tudo o que sua empresa precisa para emitir NF-e sem complicação</h2>
+          <p class="section-text">A emissão de nota fiscal não precisa travar sua operação. Com a Soften, você transforma uma tarefa burocrática em um processo mais simples, integrado e seguro.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card"><div class="feature-icon">⚡</div><h3>Emissão rápida de NF-e</h3><p>Gere suas notas fiscais com mais praticidade, aproveitando dados já cadastrados no sistema e reduzindo etapas manuais.</p></article>
+          <article class="feature-card"><div class="feature-icon">🧾</div><h3>DANFE e XML organizados</h3><p>Emita a NF-e, gere o DANFE e mantenha seus XMLs mais acessíveis para consulta, envio ao cliente e rotina com o contador.</p></article>
+          <article class="feature-card"><div class="feature-icon">📦</div><h3>Produtos e estoque integrados</h3><p>Use o cadastro de produtos para emitir notas com mais agilidade e manter sua rotina de estoque mais organizada.</p></article>
+          <article class="feature-card"><div class="feature-icon">💰</div><h3>Financeiro conectado</h3><p>Transforme a venda em informação para o financeiro e acompanhe melhor contas a receber, fluxo de caixa e movimentações.</p></article>
+          <article class="feature-card"><div class="feature-icon">📊</div><h3>Gestão além da emissão</h3><p>A Soften não é só um emissor de nota. É um sistema para controlar vendas, estoque, financeiro e gestão empresarial.</p></article>
+          <article class="feature-card"><div class="feature-icon">🤝</div><h3>Suporte para sua empresa</h3><p>Conte com uma equipe preparada para ajudar sua empresa a usar o sistema e tornar a rotina fiscal mais simples.</p></article>
+        </div>
+        <div class="section-cta center"><a class="btn btn-blue" href="https://wa.me/5521993404000?text=Ol%C3%A1%2C%20quero%20conhecer%20as%20facilidades%20do%20emissor%20de%20NF-e%20da%20Soften.&utm_source=lp&utm_medium=botao_facilidades&utm_campaign=emissor_nfe" target="_blank" rel="noopener">Conhecer as facilidades</a></div>
+      </div>
+    </section>
+
+    <section class="section" id="como-funciona">
+      <div class="container split">
+        <div>
+          <div class="eyebrow">Como funciona</div>
+          <h2 class="section-title">Da venda à nota fiscal em uma rotina mais simples</h2>
+          <p class="section-text">Em vez de preencher tudo manualmente, sua empresa trabalha com informações conectadas. Isso reduz retrabalho e deixa a emissão da NF-e mais eficiente.</p>
+          <div class="steps">
+            <div class="step"><div class="step-number">1</div><div><h3>Cadastre cliente e produtos</h3><p>Mantenha clientes, produtos, informações fiscais e dados comerciais organizados dentro do sistema.</p></div></div>
+            <div class="step"><div class="step-number">2</div><div><h3>Faça a venda ou pedido</h3><p>Registre a venda e aproveite os dados da operação para reduzir digitação na hora de emitir a nota.</p></div></div>
+            <div class="step"><div class="step-number">3</div><div><h3>Emita a NF-e</h3><p>Gere a nota fiscal eletrônica, acompanhe a autorização e tenha mais praticidade para enviar documentos.</p></div></div>
+            <div class="step"><div class="step-number">4</div><div><h3>Controle o pós-venda</h3><p>Organize XML, DANFE, estoque, financeiro e informações da venda em uma rotina mais completa.</p></div></div>
+          </div>
+       
+        </div>
+        <div class="panel">
+          <div class="eyebrow">Menos burocracia</div>
+          <h2 class="section-title" style="font-size: clamp(28px, 3vw, 40px);">Pare de perder tempo com nota fiscal feita no improviso</h2>
+          <p class="section-text" style="font-size: 17px;">Quando a emissão depende de vários sistemas, planilhas e conferências manuais, a rotina fica lenta e sujeita a erros. A Soften centraliza o que sua empresa precisa para trabalhar com mais controle.</p>
+          <ul class="list">
+            <li><span class="check">✓</span><span>Menos retrabalho na emissão de notas fiscais.</span></li>
+            <li><span class="check">✓</span><span>Mais organização para produtos, clientes e documentos.</span></li>
+            <li><span class="check">✓</span><span>Mais controle sobre vendas, estoque e financeiro.</span></li>
+            <li><span class="check">✓</span><span>Mais segurança para sua empresa crescer com gestão.</span></li>
+          </ul>
+          <div class="section-cta"><a class="btn btn-blue" href="https://wa.me/5521993404000?text=Ol%C3%A1%2C%20quero%20parar%20de%20perder%20tempo%20com%20emiss%C3%A3o%20manual%20de%20NF-e.&utm_source=lp&utm_medium=botao_menos_burocracia&utm_campaign=emissor_nfe" target="_blank" rel="noopener">Quero reduzir retrabalho</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gestao">
+      <div class="container">
+        <div class="blue-band">
+          <div>
+            <div class="eyebrow">Além da nota fiscal</div>
+            <h2>Emita NF-e e controle sua empresa no mesmo sistema</h2>
+            <p>A grande vantagem da Soften é que sua empresa não fica limitada a apenas emitir nota. Você também organiza áreas importantes do negócio, como vendas, estoque, financeiro e relatórios.</p>
+            <a class="btn btn-primary" href="https://wa.me/5521993404000?text=Ol%C3%A1%2C%20quero%20um%20sistema%20que%20emita%20NF-e%20e%20tamb%C3%A9m%20ajude%20na%20gest%C3%A3o%20da%20empresa.&utm_source=lp&utm_medium=botao_gestao_integrada&utm_campaign=emissor_nfe" target="_blank" rel="noopener">Quero um sistema completo</a>
+          </div>
+          <div class="mini-grid">
+            <div class="mini-card">NF-e com mais praticidade</div><div class="mini-card">Controle de vendas e pedidos</div><div class="mini-card">Estoque sempre mais organizado</div><div class="mini-card">Financeiro integrado à rotina</div><div class="mini-card">XMLs para rotina contábil</div><div class="mini-card">Relatórios para decisão</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-head center"><div class="eyebrow">Antes e depois</div><h2 class="section-title">Sua emissão de NF-e pode ser muito mais simples</h2><p class="section-text">A diferença entre emitir nota de forma manual e usar um sistema integrado aparece no tempo, na organização e na segurança da rotina.</p></div>
+        <div class="comparison">
+          <div class="comparison-card bad"><h3>Sem um sistema integrado</h3><ul><li><span class="xmark">!</span><span>Digitação repetida de cliente, produto e dados da venda.</span></li><li><span class="xmark">!</span><span>Notas, XMLs e DANFEs espalhados em pastas e e-mails.</span></li><li><span class="xmark">!</span><span>Venda feita em um lugar e estoque controlado em outro.</span></li><li><span class="xmark">!</span><span>Financeiro sem conexão clara com a operação comercial.</span></li><li><span class="xmark">!</span><span>Mais risco de erro, atraso e retrabalho no dia a dia.</span></li></ul></div>
+          <div class="comparison-card good"><h3>Com a Soften</h3><ul><li><span class="check">✓</span><span>Emissão de NF-e mais rápida e organizada.</span></li><li><span class="check">✓</span><span>DANFE e XML mais fáceis de localizar e enviar.</span></li><li><span class="check">✓</span><span>Venda, produto, estoque e financeiro conectados.</span></li><li><span class="check">✓</span><span>Menos retrabalho para sua equipe.</span></li><li><span class="check">✓</span><span>Mais controle para sua empresa crescer com segurança.</span></li></ul></div>
+        </div>
+        <div class="section-cta center"><a class="btn btn-primary" href="https://wa.me/5521993404000?text=Ol%C3%A1%2C%20quero%20simplificar%20a%20emiss%C3%A3o%20de%20NF-e%20da%20minha%20empresa%20com%20a%20Soften.&utm_source=lp&utm_medium=botao_antes_depois&utm_campaign=emissor_nfe" target="_blank" rel="noopener">Simplificar minha emissão de NF-e</a></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head center"><div class="eyebrow">Para quem é a Soften</div><h2 class="section-title">Ideal para empresas que querem emitir nota e controlar melhor a gestão</h2><p class="section-text">A Soften é indicada para empresas que precisam de uma rotina fiscal mais prática, mas também querem organizar vendas, produtos, estoque, financeiro e relatórios.</p></div>
+        <div class="features-grid">
+          <article class="feature-card"><div class="feature-icon">🏪</div><h3>Comércio e varejo</h3><p>Para lojas que vendem produtos, emitem NF-e e precisam manter estoque e vendas sob controle.</p></article>
+          <article class="feature-card"><div class="feature-icon">🏭</div><h3>Distribuidoras</h3><p>Para empresas que trabalham com pedidos, produtos, notas, entregas e controle financeiro mais frequente.</p></article>
+          <article class="feature-card"><div class="feature-icon">🧰</div><h3>Empresas de produtos</h3><p>Para negócios que precisam emitir NF-e com segurança e organizar melhor o processo comercial.</p></article>
+        </div>
+        <div class="section-cta center"><a class="btn btn-blue" href="https://wa.me/5521993404000?text=Ol%C3%A1%2C%20quero%20saber%20se%20o%20emissor%20de%20NF-e%20da%20Soften%20serve%20para%20minha%20empresa.&utm_source=lp&utm_medium=botao_para_quem&utm_campaign=emissor_nfe" target="_blank" rel="noopener">Ver se serve para minha empresa</a></div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-head center"><div class="eyebrow">Clientes Soften</div><h2 class="section-title">Empresas que buscam mais controle escolhem a Soften</h2><p class="section-text">Use esta área para inserir depoimentos reais de clientes da Soften, reforçando facilidade, suporte e melhoria na rotina fiscal.</p></div>
+        <div class="testimonials">
+          <article class="testimonial"><div class="stars">★★★★★</div><p>“Antes a emissão de nota tomava muito tempo da equipe. Com a Soften, conseguimos organizar melhor a rotina e reduzir retrabalho.”</p><strong>Sandra Calixto</strong><span>Comércio varejista</span></article>
+          <article class="testimonial"><div class="stars">★★★★★</div><p>“Além de emitir NF-e, conseguimos acompanhar vendas, estoque e financeiro com muito mais clareza.”</p><strong>Emerson Duque</strong><span>Distribuidora</span></article>
+          <article class="testimonial"><div class="stars">★★★★★</div><p>“O suporte fez diferença na implantação. Hoje a emissão fiscal ficou muito mais simples para nossa empresa.”</p><strong>Lais Silva</strong><span>Empresa de produtos</span></article>
+        </div>
+        <div class="section-cta center"><a class="btn btn-primary" href="https://wa.me/5521993404000?text=Ol%C3%A1%2C%20quero%20conhecer%20casos%20e%20benef%C3%ADcios%20da%20Soften%20para%20emiss%C3%A3o%20de%20NF-e.&utm_source=lp&utm_medium=botao_depoimentos&utm_campaign=emissor_nfe" target="_blank" rel="noopener">Quero falar com a Soften</a></div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head center"><div class="eyebrow">Dúvidas frequentes</div><h2 class="section-title">Perguntas comuns sobre emissão de NF-e</h2><p class="section-text">Veja respostas rápidas para as principais dúvidas antes de escolher seu sistema emissor de Nota Fiscal Eletrônica.</p></div>
+        <div class="faq">
+          <details open><summary>O que é NF-e?</summary><p>NF-e é a Nota Fiscal Eletrônica, documento digital usado para registrar operações de venda de produtos e circulação de mercadorias.</p></details>
+          <details><summary>A Soften emite NF-e?</summary><p>Sim. A Soften possui solução para emissão de NF-e com recursos que ajudam sua empresa a organizar documentos fiscais, produtos, clientes, vendas e gestão.</p></details>
+          <details><summary>O sistema gera DANFE?</summary><p>Sim. Após a emissão da NF-e, o sistema permite gerar o DANFE, documento auxiliar usado para acompanhar a mercadoria.</p></details>
+          <details><summary>Consigo enviar XML para o contador?</summary><p>Sim. A proposta da Soften é facilitar a rotina fiscal, incluindo melhor organização dos XMLs e envio das informações necessárias para o contador.</p></details>
+          <details><summary>Preciso de certificado digital para emitir NF-e?</summary><p>Sim. Para emitir NF-e, normalmente a empresa precisa de certificado digital válido e credenciamento junto à Secretaria da Fazenda do seu estado.</p></details>
+          <details><summary>A Soften é só emissor de nota?</summary><p>Não. Além da emissão fiscal, a Soften também ajuda sua empresa com controle de vendas, estoque, financeiro, relatórios e gestão empresarial.</p></details>
+          <details><summary>Esse sistema serve para pequenas empresas?</summary><p>Sim. A solução é indicada para empresas que querem emitir NF-e com mais facilidade e organizar melhor a rotina de gestão.</p></details>
+          <details><summary>Posso falar com um especialista antes de contratar?</summary><p>Sim. Você pode falar com a equipe da Soften pelo WhatsApp para entender qual solução faz mais sentido para sua empresa.</p></details>
+        </div>
+        <div class="section-cta center"><a class="btn btn-blue" href="https://wa.me/5521993404000?text=Ol%C3%A1%2C%20li%20as%20d%C3%BAvidas%20sobre%20NF-e%20e%20quero%20falar%20com%20a%20Soften.&utm_source=lp&utm_medium=botao_faq&utm_campaign=emissor_nfe" target="_blank" rel="noopener">Ainda tenho dúvidas, falar com especialista</a></div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <h2>Emita NF-e com mais facilidade e pare de perder tempo com retrabalho</h2>
+        <p>Fale com a Soften e veja como sua empresa pode emitir notas fiscais, organizar documentos e controlar melhor vendas, estoque e financeiro em um só sistema.</p>
+        <a class="btn btn-primary" href="https://wa.me/5521993404000?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20sistema%20emissor%20de%20NF-e%20da%20Soften%20agora.&utm_source=lp&utm_medium=botao_cta_final&utm_campaign=emissor_nfe" target="_blank" rel="noopener">Falar agora com a Soften</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="https://www.softensistemas.com.br/lovable-uploads/logo-soften-sistemas-footer.png" alt="Soften Sistemas" />
+      <p>© Soften Sistemas. Soluções para gestão, emissão fiscal e controle empresarial.</p>
+      <p>As informações desta página têm caráter comercial e orientativo.</p>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/5521993404000?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20de%20emissor%20de%20NF-e%20e%20quero%20falar%20com%20um%20especialista.&utm_source=lp&utm_medium=whatsapp_flutuante&utm_campaign=emissor_nfe" target="_blank" rel="noopener" aria-label="Falar com a Soften pelo WhatsApp">💬</a>
+</body>
+</html>
