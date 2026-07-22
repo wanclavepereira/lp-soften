@@ -1,16 +1,24 @@
 {
   "rewrites": [
     {
-      "source": "/cte-mdfe-ciot",
-      "destination": "/cte-mdfe-ciot.html"
+      "source": "/nfe",
+      "destination": "/index.html"
     },
     {
       "source": "/nfe-bling",
       "destination": "/nfe-bling.html"
     },
     {
-      "source": "/index",
-      "destination": "/index.html"
+      "source": "/cte-mdfe-ciot",
+      "destination": "/cte-mdfe-ciot.html"
+    },
+    {
+      "source": "/estoque-vendas",
+      "destination": "/estoque-vendas.html"
+    },
+    {
+      "source": "/ordem-servico",
+      "destination": "/ordem-servico.html"
     }
   ]
 }

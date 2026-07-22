@@ -1,0 +1,7 @@
+index.html <= página principal/NFE
+nfe-bling.html <= landing page NFE inspirada/ajustada
+cte-mdfe-ciot.html <= landing page CT-e, MDF-e e CIOT
+estoque-vendas.html <= landing page Estoque + Vendas
+ordem-servico.html <= landing page Ordem de Serviço
+hero-estoque-vendas.png <= imagem nova da primeira dobra da página Estoque + Vendas
+vercel.json <= rotas preservadas do projeto

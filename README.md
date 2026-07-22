@@ -1,19 +1,29 @@
-# LPs Soften Sistemas - Vercel
+# Projeto LPs Soften - completo com imagens
 
-Projeto estático com duas landing pages, sem uso de pastas internas.
+Suba todos estes arquivos na raiz do repositório Git/Vercel.
 
 ## Arquivos
 
-- `index.html`: página de NF-e, abre na raiz do projeto.
-- `cte-mdfe-ciot.html`: página de CT-e, MDF-e e CIOT.
-- `atendente-soften.png`: imagem usada na página de NF-e.
-- `vercel.json`: configura URL limpa para a página de CT-e/MDF-e/CIOT.
+- index.html
+- nfe-bling.html
+- cte-mdfe-ciot.html
+- estoque-vendas.html
+- ordem-servico.html
+- hero-estoque-vendas.png
+- vercel.json
+- README.md
+- MAPA-DE-ARQUIVOS.txt
 
-## URLs após deploy
+## Rotas
 
-- NF-e: `/`
-- CT-e, MDF-e e CIOT: `/cte-mdfe-ciot`
+- `/` -> index.html
+- `/nfe` -> index.html
+- `/nfe-bling` -> nfe-bling.html
+- `/cte-mdfe-ciot` -> cte-mdfe-ciot.html
+- `/estoque-vendas` -> estoque-vendas.html
+- `/ordem-servico` -> ordem-servico.html
 
-Se o Vercel não aplicar a URL limpa, use:
+## Observação importante
 
-- `/cte-mdfe-ciot.html`
+A página `estoque-vendas.html` usa a imagem `hero-estoque-vendas.png` como fundo da primeira dobra.
+Por isso, mantenha os dois arquivos juntos na raiz do projeto.
