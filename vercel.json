@@ -19,6 +19,10 @@
     {
       "source": "/ordem-servico",
       "destination": "/ordem-servico.html"
+    },
+    {
+      "source": "/ordem-servico-gerencieaqui",
+      "destination": "/ordem-servico.html"
     }
   ]
 }
